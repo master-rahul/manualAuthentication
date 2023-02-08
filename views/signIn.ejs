@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Welcome</title>
+        <link rel="stylesheet" type="text/css" href="/css/signIn.css">
+    </head>
+<body>
+    <form class="login" method="post" action="/authenticate">
+        <input type="email" placeholder="Email" name="email" required onkeydown="if(['Space'].includes(arguments[0].code)){return false;}" onpaste="return false;">
+        <input type="password" placeholder="Password" name="password" required>
+        <button id="login">Sign In</button>
+        <div id="space"></div>
+        <a href="/signUp" id="signUp">Sign Up</button></a>
+      </form>  
+</body>
+</html>
