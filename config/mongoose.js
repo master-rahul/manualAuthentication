@@ -1,10 +1,6 @@
 const mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/manualAuthentication');
 const db = mongoose.connection;
-db.on('error', function () {
-    console.error('Error : Connecting MongoDb');
-});
-db.once('open', function () {
-    console.log('Connected to DataBase successfully');
-});
+db.on('error', console.error.bind(console, 'Error Connecting to Db :'));
+db.once('open', function() {console.log('Successfully connected to Database')});
 module.exports = db;
