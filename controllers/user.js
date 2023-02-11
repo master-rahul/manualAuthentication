@@ -33,7 +33,7 @@ module.exports.autheticate = function(request, response) {
             console.log('Error in Finding Users');
             return response.redirect('back');
         }else{
-            if(users.length == 0) {
+            if(users == null) {
                 console.log('No Users found');
                 return response.redirect('back');
             }else if (users.password != request.body.password) {
